@@ -1,0 +1,25 @@
+[package]
+name = "decamelize"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.81"
+description = "Convert a camelCase string to a separated lower-case string (e.g. fooBar -> foo_bar). A faithful, zero-dependency port of the decamelize npm package."
+documentation = "https://docs.rs/decamelize"
+repository = "https://github.com/trananhtung/decamelize"
+homepage = "https://github.com/trananhtung/decamelize"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["camelcase", "decamelize", "snake-case", "string", "case"]
+categories = ["text-processing", "value-formatting", "no-std"]
+authors = ["trananhtung"]
+exclude = ["/.github", "/.gitignore"]
+
+[dependencies]
+
+[lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"

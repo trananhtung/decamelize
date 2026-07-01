@@ -12,14 +12,20 @@ fn common_identifiers() {
 
 #[test]
 fn custom_separators() {
-    assert_eq!(decamelize_with("getHTTPResponseCode", "-", false), "get-http-response-code");
+    assert_eq!(
+        decamelize_with("getHTTPResponseCode", "-", false),
+        "get-http-response-code"
+    );
     assert_eq!(decamelize_with("fooBarBaz", " ", false), "foo bar baz");
     assert_eq!(decamelize_with("fooBarBaz", "/", false), "foo/bar/baz");
 }
 
 #[test]
 fn preserve_mode() {
-    assert_eq!(decamelize_with("getHTTPResponseCode", "_", true), "get_HTTP_response_code");
+    assert_eq!(
+        decamelize_with("getHTTPResponseCode", "_", true),
+        "get_HTTP_response_code"
+    );
     assert_eq!(decamelize_with("innerHTML", "_", true), "inner_HTML");
     assert_eq!(decamelize_with("parseDBURL", "_", true), "parse_DBURL");
 }
